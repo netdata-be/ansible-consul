@@ -138,6 +138,7 @@
           become: false
           ansible.builtin.tempfile:
             state: file
+            prefix: 'ansible/'
           register: gossip_key_tempfile
 
         - name: Generate gossip encryption key # noqa no-changed-when
